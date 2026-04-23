@@ -46,31 +46,32 @@
     <table id="sheetTable"></table>
   </div>
 
-  <script>
-    const sheetCSV =
-      "https://docs.google.com/spreadsheets/d/e/2PACX-1vQjB6Lkx0WHzhJPX3xpaY55Z80KKQPO_4EpPN5B3d24R8L5bhR2SPxojHaxigJS1bB-KTqqgLfqFDSg/pub?output=csv";
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+<script>
+  const sheetCSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQjB6Lkx0WHzhJPX3xpaY55Z80KKQPO_4EpPN5B3d24R8L5bhR2SPxojHaxigJS1bB-KTqqgLfqFDSg/pub?output=csv";
 
-    async function loadSheet() {
-      const response = await fetch(sheetCSV);
-      const data = await response.text();
+  async function loadSheet() {
+    const response = await fetch(sheetCSV);
+    const csvText = await response.text();
 
-      const rows = data.trim().split("\n").map(row => row.split(","));
-      const table = document.getElementById("sheetTable");
+    const parsed = Papa.parse(csvText, { skipEmptyLines: true });
+    const rows = parsed.data;
+    const table = document.getElementById("sheetTable");
 
-      rows.forEach((row, rowIndex) => {
-        const tr = document.createElement("tr");
+    rows.forEach((row, rowIndex) => {
+      const tr = document.createElement("tr");
 
-        row.forEach(cell => {
-          const el = document.createElement(rowIndex === 0 ? "th" : "td");
-          el.textContent = cell.replace(/^"|"$/g, "");
-          tr.appendChild(el);
-        });
-
-        table.appendChild(tr);
+      row.forEach(cell => {
+        const el = document.createElement(rowIndex === 0 ? "th" : "td");
+        el.textContent = cell;
+        tr.appendChild(el);
       });
-    }
 
-    loadSheet();
-  </script>
+      table.appendChild(tr);
+    });
+  }
+
+  loadSheet();
+</script>
 </body>
 </html>
