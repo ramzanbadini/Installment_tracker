@@ -59,38 +59,32 @@
 </head>
 <body class="tail-container bg-slate-950 text-slate-200 min-h-screen">
     <!-- HEADER -->
-    <header class="hero-bg border-b border-slate-700 shadow-xl overflow-x-auto">        <div class="max-w-7xl mx-auto px-6 lg:px-8">
-        <div class="max-w-7xl mx-auto px-6 lg:px-5">   <!-- narrower width -->
-            
-            <!-- Logo + Title -->
-            <div class="flex items-center justify-between pt-6 pb-6">
-                <!-- Logo -->
-                <div class="flex items-center gap-x-3">
-                    <img src="./logo.png" alt="Your Logo" class="w-20 h-20 object-contain">
-                </div>
-                
-                <!-- Title -->
-                <div class="text-center absolute left-1/2 -translate-x-1/2 pt-5">
-                    <h1 class="title-font text-4xl md:text-5xl font-light tracking-[-2px] bg-gradient-to-r from-teal-300 via-cyan-300 to-sky-300 bg-clip-text text-transparent drop-shadow-xl whitespace-nowrap">
-                        GREEN SCHOLARS BALOCHISTAN
-                    </h1>
-                    <p class="text-slate-400 text-xl md:text-2xl mt-2 tracking-widest">where elegance meets serenity</p>
-                </div>
-                
-                <!-- Spacer -->
-                <div class="w-32"></div>
+    <header class="hero-bg border-b border-slate-700 shadow-xl">
+        <div class="max-w-5xl mx-auto px-4 lg:px-8 pt-6 pb-6">
+    
+            <!-- Logo -->
+            <div class="flex justify-center lg:justify-start mb-6">
+                <img src="./logo.png" alt="Your Logo" class="w-16 h-16 lg:w-20 lg:h-20 object-contain">
             </div>
-        
-            <!-- Tabs - Left aligned -->
-            <div class="flex justify-start pt-8 pb-4 border-b border-slate-700">   <!-- justify-start for left -->
-                <div class="inline-flex bg-slate-900/80 backdrop-blur-lg rounded-3xl p-1 shadow-inner">
-                    <button onclick="showTab(0)" id="tab-0" class="tab-button tab-active px-8 py-4 rounded-3xl text-lg font-medium flex items-center gap-x-2 transition-all hover:text-teal-300"> <i class="fas fa-info-circle"></i> <span>About</span> </button>
-                    <button onclick="showTab(1)" id="tab-1" class="tab-button px-8 py-4 rounded-3xl text-lg font-medium flex items-center gap-x-2 transition-all hover:text-teal-300"> <i class="fas fa-question-circle"></i> <span>Help</span> </button>
-                    <button onclick="showTab(2)" id="tab-2" class="tab-button px-8 py-4 rounded-3xl text-lg font-medium flex items-center gap-x-2 transition-all hover:text-teal-300"> <i class="fas fa-envelope"></i> <span>Contact</span> </button>
-                    <button onclick="showTab(3)" id="tab-3" class="tab-button px-8 py-4 rounded-3xl text-lg font-medium flex items-center gap-x-2 transition-all hover:text-teal-300"> <i class="fas fa-images"></i> <span>Gallery</span> </button>
+    
+            <!-- Title -->
+            <div class="text-center mb-8 px-4">
+                <h1 class="title-font text-4xl md:text-5xl font-light tracking-[-1.5px] bg-gradient-to-r from-teal-300 via-cyan-300 to-sky-300 bg-clip-text text-transparent drop-shadow-xl whitespace-nowrap">
+                    GREEN SCHOLARS BALOCHISTAN
+                </h1>
+                <p class="text-slate-400 text-lg md:text-xl mt-2 tracking-widest">where elegance meets serenity</p>
+            </div>
+    
+            <!-- Tabs - Left aligned on large, scrollable on mobile -->
+            <div class="flex justify-start overflow-x-auto pb-4 border-b border-slate-700">
+                <div class="inline-flex bg-slate-900/80 backdrop-blur-lg rounded-3xl p-1 shadow-inner whitespace-nowrap">
+                    <button onclick="showTab(0)" id="tab-0" class="tab-button tab-active px-6 py-4 rounded-3xl text-base font-medium flex items-center gap-x-2 transition-all hover:text-teal-300"> <i class="fas fa-info-circle"></i> <span>About</span> </button>
+                    <button onclick="showTab(1)" id="tab-1" class="tab-button px-6 py-4 rounded-3xl text-base font-medium flex items-center gap-x-2 transition-all hover:text-teal-300"> <i class="fas fa-question-circle"></i> <span>Help</span> </button>
+                    <button onclick="showTab(2)" id="tab-2" class="tab-button px-6 py-4 rounded-3xl text-base font-medium flex items-center gap-x-2 transition-all hover:text-teal-300"> <i class="fas fa-envelope"></i> <span>Contact</span> </button>
+                    <button onclick="showTab(3)" id="tab-3" class="tab-button px-6 py-4 rounded-3xl text-base font-medium flex items-center gap-x-2 transition-all hover:text-teal-300"> <i class="fas fa-images"></i> <span>Gallery</span> </button>
                 </div>
             </div>
-        
+    
         </div>
     </header>
 
